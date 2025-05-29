@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>三角形的实现过程</title>
+</head>
+<body>
+<style>
+p {
+    margin-top: 40px;
+}
+
+.border {
+        width: 0;
+        height: 0;
+        border: 50px solid;
+        border-color: transparent transparent #d9534f;
+    }
+.border1 {
+        width: 0;
+        height: 0;
+        border-style:solid;
+        border-width: 0 50px 50px;
+        border-color: transparent transparent #d9534f;
+    }
+
+
+.border2 {
+        width: 0;
+        height: 0;
+        border-style:solid;
+        border-width: 0 50px 50px;
+        border-color: transparent transparent #d9534f;
+        position: relative;
+ }
+.border2:after{
+        content: '';
+        border-style:solid;
+        border-width: 0 40px 40px;
+        border-color: transparent transparent #96ceb4;
+        position: absolute;
+        top: 0;
+        left: 0;
+  }
+
+  .border3 {
+        width: 0;
+        height: 0;
+        border-style:solid;
+        border-width: 0 50px 50px;
+        border-color: transparent transparent #d9534f;
+        position: relative;
+ }
+.border3:after{
+        content: '';
+        border-style:solid;
+        border-width: 0 40px 40px;
+        border-color: transparent transparent white;
+        position: absolute;
+        top: 6px;
+        left: -40px;
+  }
+
+.border4{
+    height: 0;
+    width: 0;
+    border-top: red solid;
+    border-right: transparent solid;
+    border-width:85px;
+}
+</style>
+
+<p>下面利用border和内容部分宽高为0画出三角形</p>
+<div class="border"></div>
+<p>上面虽然看起来实现了三角形，但隐藏的部分仍旧占据了部分高度，需要将上面的宽度去掉</p>
+<div class="border1"></div>
+
+<p>接下来实现一个空心三角形，利用伪类元素</p>
+<div class="border2"></div>
+<p>伪类元素定位参照对象内容宽高都为0，则内容区域可以理解成中心一点，所以伪元素相对中心这点定位，将元素定位进行微调以及改变颜色，就可以实现空心三角形</p>
+<div class="border3"></div>
+
+<p>下面做一个直角三角形</p>
+<div class="border4"></div>
+
+</body>
+</html>
