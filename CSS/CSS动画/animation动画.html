@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            animation
+        </title>
+    </head>
+    <style>
+        @keyframes rotate{
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes a {
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        .base {
+            width: 300px;
+            height: 200px;
+            background-color: blue;
+            animation-name: rotate;
+            animation-duration: 5s;
+            animation-delay: 500ms;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+
+        .base2 {
+            width: 400px;
+            height:300px;
+            margin:100px 100px;
+            background-color:red;
+            animation-name: a;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+        }
+    </style>
+    <body>
+        <p>下面是将一个元素旋转一圈</p>
+        <div class="base"></div>
+        <div class="base2"></div>
+    </body>
+</html>
