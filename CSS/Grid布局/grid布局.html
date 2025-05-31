@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Grid布局
+        </title>
+    </head>
+
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 100px 100px 200px;
+            grid-template-rows: 100px 100px 200px;
+            grid-template-areas: 'a b c'
+                                 'd e f'
+                                 'g h i';
+            gap: 40px;
+
+        }
+
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .a { grid-area: a; background-color: #e74c3c; }
+        .b { grid-area: b; background-color: #3498db; }
+        .c { grid-area: c; background-color: #2ecc71; }
+        .d { grid-area: d; background-color: #9b59b6; }
+        .e { grid-area: e; background-color: #f39c12; }
+        .f { grid-area: f; background-color: #1abc9c; }
+        .g { grid-area: g; background-color: #34495e; }
+        .h { grid-area: h; background-color: #e67e22; }
+        .i { grid-area: i; background-color: #7f8c8d; }
+    </style>
+
+<body>
+    <div class="container">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+    </div>
+</body>
+
+</html>
